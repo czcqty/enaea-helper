@@ -1,11 +1,11 @@
 # 学习公社课程连续播放
 
-版本 1.3.0　2026-11-11（北京时间）
+版本 1.3.1　2026-11-13（北京时间）
 
 ## 安装或更新
 
 1. 在电脑的 Chrome、Edge 或 Firefox 中安装 [Tampermonkey](https://www.tampermonkey.net/)。
-2. 点击 **[一键安装脚本](https://raw.githubusercontent.com/czcqty/enaea-helper/main/enaea-autoplay.user.js)**，在 Tampermonkey 页面确认安装。更新旧版时可再次打开此链接。请只启用一份同站点播放脚本。
+2. 点击 **[一键安装脚本](https://raw.githubusercontent.com/czcqty/enaea-helper/main/enaea-autoplay.user.js)**，在 Tampermonkey 页面确认安装。已安装 1.3.0 的用户请先通过此链接手动升级一次。从 1.3.1 起，Tampermonkey 可按你的自动更新设置从 GitHub 获取新版本。请只启用一份同站点播放脚本。
 3. Chrome 或 Edge 如提示缺少执行权限，在 Tampermonkey 扩展详情中启用“允许用户脚本”。[官方说明](https://www.tampermonkey.net/faq.php?q=Q209)
 4. 登录学习公社，打开或刷新[目标课程总页](https://study.enaea.edu.cn/circleIndexRedirect.do?action=toNewMyClass&type=course&circleId=395435&syllabusId=2321900&isRequired=true&studentProgress=0)，在右下角“学习公社 · 连续播放”面板点击“开始”。也可以在已经打开的单课页刷新后，就地开始。
 

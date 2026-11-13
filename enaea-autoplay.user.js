@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         学习公社课程连续播放（指定班级）
 // @namespace    local.enaea.player.helper
-// @version      1.3.0
-// @downloadURL  none
-// @updateURL    none
+// @version      1.3.1
+// @downloadURL  https://raw.githubusercontent.com/czcqty/enaea-helper/main/enaea-autoplay.user.js
+// @updateURL    https://raw.githubusercontent.com/czcqty/enaea-helper/main/enaea-autoplay.user.js
 // @description  连续播放普通视频，跟踪酷雷曼和 720云 VR 课程进度，按平台进度切课，支持普通视频断点续播。
 // @match        https://study.enaea.edu.cn/circleIndexRedirect.do*
 // @match        https://study.enaea.edu.cn/viewerforccvideo.do*
@@ -43,7 +43,7 @@ https://greasyfork.org/en/scripts/587714/code
   'use strict';
 
   const CONFIG = Object.freeze({
-    version: '1.3.0',
+    version: '1.3.1',
     origin: 'https://study.enaea.edu.cn',
     circleId: '395435',
     syllabusId: '2321900',
