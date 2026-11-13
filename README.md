@@ -1,18 +1,17 @@
-学习公社课程连续播放
+# 学习公社课程连续播放
+
 版本 1.3.0　2026-11-11（北京时间）
 
-一、安装或更新
+## 安装或更新
 
-1. 在电脑 Chrome、Edge 或 Firefox 安装 Tampermonkey。
-   官网 https://www.tampermonkey.net/
-2. 已安装旧版时，在 Tampermonkey 管理面板打开原有的“学习公社课程连续播放（指定班级）”脚本。首次安装时选择“添加新脚本”。
-3. 用文本编辑器打开本目录的 enaea-autoplay.user.js，复制全文，替换脚本编辑器内容，保存并启用。只启用一份同站点播放脚本。
-4. Chrome 或 Edge 如提示缺少执行权限，在 Tampermonkey 扩展详情中启用“允许用户脚本”。官方说明 https://www.tampermonkey.net/faq.php?q=Q209
-5. 登录学习公社，打开或刷新目标课程总页。
-   https://study.enaea.edu.cn/circleIndexRedirect.do?action=toNewMyClass&type=course&circleId=395435&syllabusId=2321900&isRequired=true&studentProgress=0
-6. 在右下角“学习公社 · 连续播放”面板点击“开始”。也可以在已经打开的单课页刷新后，就地开始。
+1. 在电脑的 Chrome、Edge 或 Firefox 中安装 [Tampermonkey](https://www.tampermonkey.net/)。
+2. 点击 **[一键安装脚本](https://raw.githubusercontent.com/czcqty/enaea-helper/main/enaea-autoplay.user.js)**，在 Tampermonkey 页面确认安装。更新旧版时可再次打开此链接。请只启用一份同站点播放脚本。
+3. Chrome 或 Edge 如提示缺少执行权限，在 Tampermonkey 扩展详情中启用“允许用户脚本”。[官方说明](https://www.tampermonkey.net/faq.php?q=Q209)
+4. 登录学习公社，打开或刷新[目标课程总页](https://study.enaea.edu.cn/circleIndexRedirect.do?action=toNewMyClass&type=course&circleId=395435&syllabusId=2321900&isRequired=true&studentProgress=0)，在右下角“学习公社 · 连续播放”面板点击“开始”。也可以在已经打开的单课页刷新后，就地开始。
 
-二、普通视频
+如果点击安装链接后只看到源码，可复制 [`enaea-autoplay.user.js`](./enaea-autoplay.user.js) 全文，在 Tampermonkey 管理面板选择“添加新脚本”。已安装旧版时，打开原有的“学习公社课程连续播放（指定班级）”脚本。替换编辑器内容，保存并启用。
+
+## 普通视频
 
 从总页启动时，脚本优先恢复上次保存的课程、分集和播放位置。如果没有续播记录，就从课程列表查找未完成课程，在当前标签页进入。如浏览器阻止自动播放，手动点一次播放器的播放按钮。
 
@@ -22,7 +21,7 @@
 
 脚本约每 1.5 秒检查一次页面。遇到休息提示时，等倒计时结束、“继续学习”按钮可用后再点击，同一按钮两次点击至少间隔 5 秒。遇到验证码、测验或身份确认时，请按页面提示手动处理。
 
-三、720 云和酷雷曼 VR 导览
+## 720 云和酷雷曼 VR 导览
 
 在课程总页或 VR 课程页点一次助手的“开始”。进入 720 云课程时，助手会为缺少自动播放授权的课件补上授权，并重新加载该课件一次，让它在浏览器允许时直接播放讲解。如果在已打开的导览中才启动助手，当前场景可能随这次加载重新开始。如果浏览器仍要求手势，点一下全景画面即可。
 
@@ -32,7 +31,7 @@
 
 “暂停跟踪”停止助手核对和切课。需要停止讲解时，请使用课件自己的控件。
 
-四、暂停、恢复和异常
+## 暂停、恢复和异常
 
 普通视频页点击“暂停”会保存可用的续播位置、暂停当前可访问的视频并停止自动操作。在同一浏览器重新打开课程总页，点击“开始”可续播。运行中的标签页刷新或切换课程后会恢复运行。VR 场景位置由原课件管理。
 
@@ -40,24 +39,28 @@
 
 遇到登录过期，请重新登录后回到课程页。普通视频分集、目录或分页无法识别时，面板会给出提示。若总页进度尚未同步，请按面板提示核对。考试、作业及研讨的完成情况请在平台相应栏目查看。
 
-需要停用或卸载时，在 Tampermonkey 管理面板禁用或删除脚本，然后刷新课程页。脚本的本地状态使用 enaea-local-helper:395435:2321900: 前缀保存。
+需要停用或卸载时，在 Tampermonkey 管理面板禁用或删除脚本，然后刷新课程页。脚本的本地状态使用 `enaea-local-helper:395435:2321900:` 前缀保存。
 
-五、诊断和验证
+## 诊断和验证
 
-点击面板“下载诊断”，可将 enaea-diagnostic.json 保存到本机。报告记录脚本版本、运行状态、课程编号、可读取的进度和近期操作，可与页面截图一同用于排查。如未出现面板，先检查脚本是否启用、浏览器是否允许用户脚本及当前页面是否属于目标班级。
+点击面板“下载诊断”，可将 `enaea-diagnostic.json` 保存到本机。报告记录脚本版本、运行状态、课程编号、可读取的进度和近期操作，可与页面截图一同用于排查。如未出现面板，先检查脚本是否启用、浏览器是否允许用户脚本及当前页面是否属于目标班级。
 
-课程 308542（《沂蒙精神的本质内涵》）和 308579（《沂蒙精神的重要组成部分》）均使用 720 云。1.2.1 增加了导览识别和进度跟踪，诊断中的 playerType 为 720yun-vr。1.2.2 修复了课程页没有向 720 云课件授予自动播放权限的问题。
+课程 308542（《沂蒙精神的本质内涵》）和 308579（《沂蒙精神的重要组成部分》）均使用 720 云。1.2.1 增加了导览识别和进度跟踪，诊断中的 `playerType` 为 `720yun-vr`。1.2.2 修复了课程页没有向 720 云课件授予自动播放权限的问题。
 
 此前已在 1.2.0 中验证酷雷曼课程 312408 达到 100% 后返回总页并进入 312409。普通视频的目录和 XGPlayer 播放器在 1.1 版适配时已核对。
 
 如需运行语法检查和本地回归测试，在本目录执行以下 Node.js 命令。
-   node --check enaea-autoplay.user.js
-   node --test offline-tests.cjs
 
-六、适配参考
+```sh
+node --check enaea-autoplay.user.js
+node --test offline-tests.cjs
+```
+
+## 适配参考
 
 旧版普通视频 DOM 名称另参考以下公开实现。
-https://github.com/sqhome-jin/enaeaHelperPlus/blob/main/enaeaHelperPlus.js
-https://greasyfork.org/en/scripts/587714/code
+
+- [GitHub 上的 enaeaHelperPlus](https://github.com/sqhome-jin/enaeaHelperPlus/blob/main/enaeaHelperPlus.js)
+- [Greasy Fork 上的脚本源码](https://greasyfork.org/en/scripts/587714/code)
 
 脚本直接使用浏览器编程接口，无外部脚本依赖。
